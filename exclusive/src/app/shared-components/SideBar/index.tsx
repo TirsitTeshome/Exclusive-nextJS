@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React, { useState, useEffect } from 'react';
-// import Image from 'next/image'
-import { AppleIcon, ArrowRightIcon, ArrowLeftIcon,  } from "../Icons";
+import { AppleIcon, ArrowRightIcon,  } from "../Icons";
 
 export default function SidebarVoucher() {
   const menuItems = [

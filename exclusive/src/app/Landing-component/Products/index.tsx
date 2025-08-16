@@ -1,9 +1,8 @@
 "use client";
-
-import { useState, useEffect } from 'react';
-// import { EyeIcon, StarIcon, HeartIcon } from '@/app/shared-components/Icons';
+import { useState } from 'react';
+import Image from 'next/image';
 import NavigationArrows from '../Arrows';
-import { AiOutlineHeart, AiFillHeart, AiOutlineEye, AiFillEye } from 'react-icons/ai';
+import { AiOutlineHeart, AiOutlineEye } from 'react-icons/ai';
 import { FaStar } from 'react-icons/fa';
 
 interface Product {
@@ -16,13 +15,13 @@ interface Product {
   reviews: number;
   image: string;
 }
-
 interface ProductCardProps {
   products: Product[];
 }
 
 const ProductCard = ({ products }: ProductCardProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+
   const cardsPerView = 3;
   const maxIndex = Math.max(0, products.length - cardsPerView);
 
@@ -54,16 +53,25 @@ const ProductCard = ({ products }: ProductCardProps) => {
               style={{ transform: `translateX(${translateX})` }}
             >
               {products.map((product) => (
-                <div key={product.id} className="relative bg-gray-100 p-4 rounded-sm shadow-md w-64 gap-
-                 flex-shrink-0 group ">
-                  <div className="absolute top-2 left-2 bg-red-500 text-white px-3 py-1 font-poppins rounded-xs text-sm">
+                <div
+                  key={product.id}
+                  className="relative bg-gray-100 p-4 rounded-sm shadow-md w-64 flex-shrink-0 group"
+                >
+                  <div className="absolute top-2 left-2 bg-red-500 text-white px-3 py-1 font-poppins rounded-sm text-sm">
                     -{product.discount}%
                   </div>
                   <div className="absolute top-2 right-2 flex flex-col space-y-2">
                     <AiOutlineHeart className="text-black hover:text-red-500 cursor-pointer" />
                     <AiOutlineEye className="text-black hover:text-blue-500 cursor-pointer" />
                   </div>
-                  <img src={product.image} alt={product.name} className="w-full h-40 object-contain" />
+                  <div className="w-full h-40 relative">
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      fill
+                      style={{ objectFit: 'contain' }}
+                    />
+                  </div>
                   <button className="w-full rounded-sm bg-black text-white py-2 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     Add To Cart
                   </button>

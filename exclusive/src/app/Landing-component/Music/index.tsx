@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useMemo } from "react";
+import Image from "next/image";
 
 const MusicBanner: React.FC = () => {
   // Countdown state
@@ -20,21 +21,23 @@ const MusicBanner: React.FC = () => {
     const intervalId = setInterval(() => {
       const now = new Date().getTime();
       const distance = countdownDate.getTime() - now;
+
       if (distance < 0) {
         setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
         clearInterval(intervalId);
         return;
       }
+
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
       const hours = Math.floor(
         (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
       );
-      const minutes = Math.floor(
-        (distance % (1000 * 60 * 60)) / (1000 * 60)
-      );
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
       setTimeLeft({ days, hours, minutes, seconds });
     }, 1000);
+
     return () => clearInterval(intervalId);
   }, [countdownDate]);
 
@@ -72,11 +75,13 @@ const MusicBanner: React.FC = () => {
       </div>
       {/* Right Side Image */}
       <div className="relative w-full max-w-lg">
-        <img
-          src="pics/speaker.png"
+        <Image
+          src="/pics/speaker.png"
           alt="JBL Speaker"
-          // className="w-800 h-100"
+          width={800}
+          height={100}
           style={{ filter: "drop-shadow(0 0 30px rgba(0,0,0,0.9))" }}
+          className=""
         />
         {/* Optional black gradient overlay behind product */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 to-transparent pointer-events-none" />

@@ -1,6 +1,4 @@
 "use client";
-
-
 import MusicBanner from './Landing-component/Music';
 import Header from './shared-components/Header/index';
 import SidebarVoucher from './shared-components/SideBar';
@@ -15,9 +13,7 @@ import ExploreProd from './Landing-component/Explore-prod';
 import ServicesList from './Landing-component/Services';
 import Footer from './Landing-component/Footer';
 
-
 export default function Home() {
-    const date = '2025-12-31T23:59:59';
     const exampleProducts = [
         {
             id: 1,
@@ -100,9 +96,6 @@ export default function Home() {
             image: '/pics/gamepad.jpg',
         },
     ];
-    const handleButtonClick = () => {
-        alert('!');
-    };
 
     return (
         <>
@@ -110,7 +103,7 @@ export default function Home() {
             <SidebarVoucher />
             <div>
                 <SubTitle label="Today's" />
-                <div className=' flex items-center w-3/4 mx-auto '>
+                <div className="flex items-center w-3/4 mx-auto">
                     <Title title="Flash Sales" />
                     <Timer date="2025-12-31T23:59:59" />
                 </div>
@@ -118,25 +111,23 @@ export default function Home() {
             <ProductCard products={exampleProducts} />
             <div>
                 <SubTitle label="Categories" />
-                <div className=' flex items-center mb-10'>
+                <div className="flex items-center mb-10">
                     <Title title="Browse By Category" />
                 </div>
             </div>
             <Category />
-            <SellingProducts/>
-             <MusicBanner />
-            <ExploreProd/>
-
-              <div>
+            <SellingProducts />
+            <MusicBanner />
+            <ExploreProd />
+            <div>
                 <SubTitle label="Featured" />
-                <div className=' flex items-center'>
+                <div className="flex items-center">
                     <Title title="New Arrival" />
                 </div>
             </div>
-            <ProductGrid/>
-            <ServicesList/>
-            <Footer/>
-        
+            <ProductGrid />
+            <ServicesList />
+            <Footer />
         </>
-    )
+    );
 }
