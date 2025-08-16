@@ -1,5 +1,3 @@
-
-
 import Image from "next/image";
 import React, { useState, useEffect } from 'react';
 // import Image from 'next/image'
@@ -18,7 +16,7 @@ export default function SidebarVoucher() {
     "Health & Beauty",
   ];
   const products =[
-    '/pics/gamepad.jpg', '/pics/phone.jpg', '/pics/speaker'
+    '/pics/phone.jpg', '/pics/phone4.webp', '/pics/apple watch.jpg'
   ];
   
    const [currentIndex, setCurrentIndex] = useState(0);
@@ -47,8 +45,8 @@ export default function SidebarVoucher() {
       <div className="w-3/4 bg-black relative flex items-center px-10 h-102 ">
       
       <div className="flex-1 text-white">
-        <div className="flex items-center gap-7 mb-5">
-          <span className=" w-10 h-10  flex items-center justify-center">
+        <div className="flex items gap-7 mb-5">
+          <span className=" w-18 h-10  flex items-center justify-center">
             <AppleIcon className=''/>
           </span>
           <span className="font-poppins">iPhone 14 Series</span>
@@ -83,5 +81,4 @@ export default function SidebarVoucher() {
       </div>
     </div>
 </div>
-     
     )}

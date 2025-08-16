@@ -9,6 +9,11 @@ import SubTitle from './Landing-component/Sub-title';
 import Title from './Landing-component/Title';
 import ProductCard from './Landing-component/Products';
 import Category from './Landing-component/Browsing';
+import ProductGrid from './Landing-component/Arrival';
+import SellingProducts from './Landing-component/Selling';
+import ExploreProd from './Landing-component/Explore-prod';
+import ServicesList from './Landing-component/Services';
+import Footer from './Landing-component/Footer';
 
 
 export default function Home() {
@@ -22,7 +27,7 @@ export default function Home() {
             discount: 40,
             rating: 5,
             reviews: 88,
-            image: '/pics/gamepad.jpg',
+            image: '/pics/1.jpg',
         },
         {
             id: 2,
@@ -32,7 +37,7 @@ export default function Home() {
             discount: 35,
             rating: 5,
             reviews: 75,
-            image: '/pics/gamepad.jpg',
+            image: '/pics/2.jpg',
         },
         {
             id: 1,
@@ -42,7 +47,7 @@ export default function Home() {
             discount: 40,
             rating: 5,
             reviews: 88,
-            image: '/pics/gamepad.jpg',
+            image: '/pics/3.jpg',
         },
         {
             id: 2,
@@ -52,7 +57,7 @@ export default function Home() {
             discount: 35,
             rating: 5,
             reviews: 75,
-            image: '/pics/gamepad.jpg',
+            image: '/pics/4.jpg',
         },
         {
             id: 1,
@@ -62,7 +67,7 @@ export default function Home() {
             discount: 40,
             rating: 5,
             reviews: 88,
-            image: '/pics/gamepad.jpg',
+            image: '/pics/4.jpg',
         },
         {
             id: 2,
@@ -110,9 +115,6 @@ export default function Home() {
                     <Timer date="2025-12-31T23:59:59" />
                 </div>
             </div>
-
-
-
             <ProductCard products={exampleProducts} />
             <div>
                 <SubTitle label="Categories" />
@@ -121,33 +123,20 @@ export default function Home() {
                 </div>
             </div>
             <Category />
-           
-               <div>
-                <SubTitle label="This Month" />
-                <div className=' flex items-center mb-10'>
-                    <Title title="Best Selling Products" />
-                </div>
-            </div>
-
-              <ProductCard products={exampleProducts} />
-
+            <SellingProducts/>
              <MusicBanner />
-              <div>
-                <SubTitle label="Our Products" />
-                <div className=' flex items-center mb-10'>
-                    <Title title="Explore Our Products" />
-                </div>
-            </div>
-
-            <ProductCard products={exampleProducts} />
-            <ProductCard products={exampleProducts} />
+            <ExploreProd/>
 
               <div>
                 <SubTitle label="Featured" />
-                <div className=' flex items-center mb-10'>
+                <div className=' flex items-center'>
                     <Title title="New Arrival" />
                 </div>
             </div>
+            <ProductGrid/>
+            <ServicesList/>
+            <Footer/>
+        
         </>
     )
 }

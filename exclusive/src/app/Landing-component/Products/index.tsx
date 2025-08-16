@@ -1,8 +1,10 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { EyeIcon, StarIcon, HeartIcon } from '@/app/shared-components/Icons';
+// import { EyeIcon, StarIcon, HeartIcon } from '@/app/shared-components/Icons';
 import NavigationArrows from '../Arrows';
+import { AiOutlineHeart, AiFillHeart, AiOutlineEye, AiFillEye } from 'react-icons/ai';
+import { FaStar } from 'react-icons/fa';
 
 interface Product {
   id: number;
@@ -52,13 +54,14 @@ const ProductCard = ({ products }: ProductCardProps) => {
               style={{ transform: `translateX(${translateX})` }}
             >
               {products.map((product) => (
-                <div key={product.id} className="relative bg-gray-100 p-4 rounded-sm shadow-md w-64 flex-shrink-0 group">
+                <div key={product.id} className="relative bg-gray-100 p-4 rounded-sm shadow-md w-64 gap-
+                 flex-shrink-0 group ">
                   <div className="absolute top-2 left-2 bg-red-500 text-white px-3 py-1 font-poppins rounded-xs text-sm">
                     -{product.discount}%
                   </div>
                   <div className="absolute top-2 right-2 flex flex-col space-y-2">
-                    <HeartIcon className="text-white hover:text-red-500 cursor-pointer" />
-                    <EyeIcon className="text-black hover:text-blue-500 cursor-pointer" />
+                    <AiOutlineHeart className="text-black hover:text-red-500 cursor-pointer" />
+                    <AiOutlineEye className="text-black hover:text-blue-500 cursor-pointer" />
                   </div>
                   <img src={product.image} alt={product.name} className="w-full h-40 object-contain" />
                   <button className="w-full rounded-sm bg-black text-white py-2 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -72,7 +75,7 @@ const ProductCard = ({ products }: ProductCardProps) => {
                   <div className="flex items-center font-poppins">
                     {Array.from({ length: product.rating }, (_, i) => (
                       <span key={i} className="text-yellow-600">
-                        <StarIcon />
+                        <FaStar />
                       </span>
                     ))}
                     <span className="ml-2 text-gray-600">({product.reviews})</span>
