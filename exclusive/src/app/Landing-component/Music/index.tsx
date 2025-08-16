@@ -2,7 +2,7 @@ import React, { useEffect, useState, useMemo } from "react";
 import Image from "next/image";
 
 const MusicBanner: React.FC = () => {
-  // Countdown state
+ 
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -10,7 +10,7 @@ const MusicBanner: React.FC = () => {
     seconds: 0,
   });
 
-  // Set countdown target date/time (example: 5 days from now)
+  
   const countdownDate = useMemo(() => {
     const date = new Date();
     date.setDate(date.getDate() + 5);
@@ -45,13 +45,13 @@ const MusicBanner: React.FC = () => {
 
   return (
     <section className="w-3/4 m-auto mt-25 relative bg-black text-white min-h-[360px] flex flex-col md:flex-row items-center justify-between px-8 md:px-20 py-16 gap-8 md:gap-16 overflow-hidden">
-      {/* Left Side Text */}
+  
       <div className="flex flex-col gap-6 max-w-xl w-full">
         <span className="text-green-500 font-semibold font-poppins">Categories</span>
         <h1 className="text-4xl md:text-5xl font-extrabold leading-tight font-poppins">
           Enhance Your <br /> Music Experience
         </h1>
-        {/* Countdown */}
+   
         <div className="flex gap-6">
           {[
             { label: "Days", value: pad(timeLeft.days) },
@@ -68,12 +68,12 @@ const MusicBanner: React.FC = () => {
             </div>
           ))}
         </div>
-        {/* Buy Now Button */}
+    
         <button className="mt-4 px-14 py-5 bg-green-500 text-2xl hover:bg-white rounded-md font-semibold font-poppins hover:text-green-600 transition-colors duration-300 w-max">
           Buy Now!
         </button>
       </div>
-      {/* Right Side Image */}
+
       <div className="relative w-full max-w-lg">
         <Image
           src="/pics/speaker.png"
@@ -83,7 +83,7 @@ const MusicBanner: React.FC = () => {
           style={{ filter: "drop-shadow(0 0 30px rgba(0,0,0,0.9))" }}
           className=""
         />
-        {/* Optional black gradient overlay behind product */}
+     
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 to-transparent pointer-events-none" />
       </div>
     </section>

@@ -44,7 +44,7 @@ const products: Product[] = [
   },
 ];
 
-// Separate component for each product to manage local liked/viewed states
+
 function ProductItem({ product }: { product: Product }) {
   const [liked, setLiked] = useState(false);
   const [viewed, setViewed] = useState(false);

@@ -8,8 +8,8 @@ export default function Arrivals() {
  return (
    <main className="bg-white flex items-center justify-center py-8 px-2">
      <div className="grid grid-cols-2 gap-6 max-w-6xl w-full">
-       {/* Left big card */}
-       <div className="relative rounded-lg overflow-hidden bg-black h-[640px]"> {/* Height increased */}
+     
+       <div className="relative rounded-lg overflow-hidden bg-black h-[640px]"> 
          <Image
            src="/pics/playstation.jpg"
            alt="PlayStation 5"
@@ -31,9 +31,8 @@ export default function Arrivals() {
        </div>
 
 
-       {/* Right column */}
-       <div className="flex flex-col gap-6 h-[640px]"> {/* Height increased */}
-         {/* Top card */}
+       <div className="flex flex-col gap-6 h-[640px]"> 
+    
          <div className="relative rounded-lg overflow-hidden bg-black flex-1 min-h-[310px]">
            <Image
              src="/pics/girl.jpg"
@@ -54,9 +53,9 @@ export default function Arrivals() {
            </div>
            <div className="absolute inset-0 bg-gradient-to-l from-black/80 via-black/30 to-transparent z-5" />
          </div>
-         {/* Bottom cards */}
+       
          <div className="flex gap-6 flex-1 min-h-[310px]">
-           {/* Speakers */}
+       
            <div className="relative rounded-lg overflow-hidden bg-black flex-1 min-w-0">
              <Image
                src="/pics/speaker3.png"
@@ -75,7 +74,7 @@ export default function Arrivals() {
              </div>
              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent z-5" />
            </div>
-           {/* Perfume */}
+        
            <div className="relative rounded-lg overflow-hidden bg-black flex-1 min-w-0">
              <Image
                src="/pics/gucci.png"

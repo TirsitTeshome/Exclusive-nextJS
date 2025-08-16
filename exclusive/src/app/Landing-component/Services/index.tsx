@@ -35,11 +35,9 @@ export default function ServicesList() {
        </p>
      </div>
 
-
-     {/* Feature 2 */}
      <div className="flex flex-col items-center min-w-[270px]">
        <span className="flex items-center justify-center h-16 w-16 rounded-full bg-gray-300 shadow">
-         {/* Headphones SVG */}
+       
          <svg
            className="w-12 h-12 fill-black"
            viewBox="0 0 24 24"
@@ -66,10 +64,9 @@ export default function ServicesList() {
      </div>
 
 
-     {/* Feature 3 */}
      <div className="flex flex-col items-center min-w-[270px]">
        <span className="flex items-center justify-center h-16 w-16 rounded-full bg-gray-300 shadow">
-         {/* Shield/Check SVG */}
+     
          <svg
            className="w-12 h-12 fill-black"
            viewBox="0 0 24 24"
