@@ -279,3 +279,69 @@ export function EarPhoneIcon({ className = "" }: IconProps) {
     </svg>
   );
 }
+
+export function TruckIcon({ className = "" }: IconProps) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className={className}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 0 0-10.026 0 1.106 1.106 0 0 0-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"
+      />
+    </svg>
+  );
+}
+
+export function CustomerServiceIcon({ className = "" }: IconProps) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className={className}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M22 10.5h-6m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM4 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 10.374 21c-2.331 0-4.512-.645-6.374-1.766Z"
+      />
+    </svg>
+  );
+}
+
+export function GuaranteeIcon({ className = "" }: IconProps) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className={className}
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+    </svg>
+  );
+}
+
+export function AppleIcon({ className = "" }: IconProps) {
+  return (
+    <svg
+      fill="white"
+      viewBox="0 0 24 24"
+      className={className}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M17.7 13.5c-.1-2.1 1.6-3.1 1.7-3.2-.9-1.3-2.3-1.4-2.8-1.4-1.2-.1-2.4.7-3 .7-.6 0-1.5-.7-2.4-.7-1.2 0-2.3.7-2.9 1.8-1.2 2.1-.3 5.1.9 6.7.6.8 1.3 1.7 2.2 1.7.9 0 1.3-.5 2.4-.5s1.5.5 2.4.5c.9 0 1.5-.8 2.1-1.7.6-.8.8-1.6.8-1.7 0-.1-2.1-.8-2.2-3.1zm-2.7-6.2c.5-.6.9-1.4.8-2.2-.8.1-1.7.5-2.2 1.2-.5.6-.9 1.4-.8 2.1.8 0 1.7-.4 2.2-1.1z" />
+    </svg>
+  );
+}
