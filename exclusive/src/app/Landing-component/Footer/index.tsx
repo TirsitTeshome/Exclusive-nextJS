@@ -3,25 +3,11 @@
 import React from "react";
 import { Poppins } from "next/font/google";
 
-
-
-
-
-
-
-
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
   variable: "--font-poppins",
 });
-
-
-
-
-
-
-
 
 const Footer = () => {
   return (
@@ -45,9 +31,6 @@ const Footer = () => {
                   </form>
               </div>
 
-
-
-
               <div className="space-y-4  border-gray-700 pr-4 text-m ">
                   <h3 className="font-semibold text-white">Support</h3>
                   <p>
@@ -56,13 +39,6 @@ const Footer = () => {
                   <p>exclusive@gmail.com</p>
                   <p>+88015-88888-9999</p>
               </div>
-
-
-
-
-
-
-
 
               <div className="space-y-4 border-gray-700 pr-4 text-m ">
                   <h3 className="font-semibold">Account</h3>
@@ -75,9 +51,6 @@ const Footer = () => {
                   </ul>
               </div>
 
-
-
-
               <div className="space-y-4 border-gray-700 pr-4 text-m">
                   <h3 className="font-semibold">Quick Link</h3>
                   <ul className="space-y-2 cursor-pointer">
@@ -88,29 +61,26 @@ const Footer = () => {
                   </ul>
               </div>
 
-
-
-
               <div className="space-y-4 text-m ">
                   <h3 className="font-semibold">Download App</h3>
                   <p className="text-[15px] mb-3">Save $3 with App New User Only</p>
                   <div className="flex space-x-3 mb-3">
                       <img
-                          src="/pictures/qr.png"
+                          src="/pics/qr.png"
                           alt="QR code"
                           className="w-22 h-22 object-contain border border-white"
                       />
                       <div className="flex flex-col justify-between gap-2">
                           <a href="" className="">
                               <img
-                                  src="/pictures/google play.webp"
+                                  src="/pics/google play.webp"
                                   alt="Google Play Store"
                                   className="w-30 object-contain"
                               />
                           </a>
                           <a href="" className="">
                               <img
-                                  src="/pictures/app store.webp"
+                                  src="/pics/app store.webp"
                                   alt="Apple App Store"
                                   className="w-30 object-contain"
                               />
