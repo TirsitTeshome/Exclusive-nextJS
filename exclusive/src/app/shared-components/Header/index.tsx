@@ -19,7 +19,7 @@ export default function TopNav() {
             <Link href="#">About</Link>
           </li>
           <li>
-            <Link href="#" className="hover:text-secondary">
+            <Link href="../signup" className="hover:text-secondary">
               Sign Up
             </Link>
           </li>

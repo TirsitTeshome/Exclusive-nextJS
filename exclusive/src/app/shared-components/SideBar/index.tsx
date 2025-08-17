@@ -33,7 +33,7 @@ export default function SidebarVoucher() {
       <aside className="min-w-[200px] border-r border-gray-200 pr-6">
         <ul className="space-y-4 text-lg font-poppins text-black">
           {menuItems.map((item, idx) => (
-            <li key={idx} className="flex justify-between items-center cursor-pointer hover:font-semibold">
+            <li key={idx} className="flex justify-between items-center cursor-pointer hover:font-semibold gap-15">
               <span>{item}</span>
               {(item === "Woman’s Fashion" || item === "Men’s Fashion") && <span>&gt;</span>}
             </li>
@@ -41,14 +41,14 @@ export default function SidebarVoucher() {
         </ul>
       </aside>
 
-      <div className="w-3/4 bg-black relative flex items-center px-10 h-102 ">
+      <div className="w-3/4 bg-black m-auto relative flex items-center px-12 h-102 ">
       
       <div className="flex-1 text-white">
-        <div className="flex items gap-7 mb-5">
+        <div className="flex items mb-5">
           <span className=" w-18 h-10  flex items-center justify-center">
             <AppleIcon className=''/>
           </span>
-          <span className="font-poppins">iPhone 14 Series</span>
+          <span className="font-poppins mt-4 mr-10">iPhone 14 Series</span>
         </div>
         <h2 className="text-5xl font-bold font-poppins mb-4 leading-tight">
           Up to 10%<br />
@@ -58,11 +58,11 @@ export default function SidebarVoucher() {
           Shop Now <span className="ml-1"><ArrowRightIcon/></span>
         </button>
       </div>
-      <div className="flex-1 flex justify-end items-center h-full">
+      <div className="">
         <Image
           src={products[currentIndex]}
           alt={`Product ${currentIndex + 1}`}
-          width={400}
+          width={500}
           height={50}
           className="object-contain"
         />

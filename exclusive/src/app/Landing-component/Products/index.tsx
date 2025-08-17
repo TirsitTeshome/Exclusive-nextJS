@@ -57,14 +57,14 @@ const ProductCard = ({ products }: ProductCardProps) => {
                   key={product.id}
                   className="relative bg-gray-100 p-4 rounded-sm shadow-md w-64 flex-shrink-0 group"
                 >
-                  <div className="absolute top-2 left-2 bg-red-500 text-white px-3 py-1 font-poppins rounded-sm text-sm">
+                  <div className="absolute z-10 top-2 left-2 bg-red-500 text-white px-3 py-1 font-poppins rounded-sm text-sm">
                     -{product.discount}%
                   </div>
                   <div className="absolute top-2 right-2 flex flex-col space-y-2">
                     <AiOutlineHeart className="text-black hover:text-red-500 cursor-pointer" />
                     <AiOutlineEye className="text-black hover:text-blue-500 cursor-pointer" />
                   </div>
-                  <div className="w-full h-40 relative">
+                  <div className="w-50 h-40 relative">
                     <Image
                       src={product.image}
                       alt={product.name}
