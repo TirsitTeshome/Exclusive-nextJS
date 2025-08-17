@@ -36,7 +36,7 @@ export default function Home() {
             image: '/pics/2.jpg',
         },
         {
-            id: 1,
+            id: 3,
             name: 'HAVIT HV-G92 Gamepad',
             price: 120,
             originalPrice: 160,
@@ -46,7 +46,7 @@ export default function Home() {
             image: '/pics/3.jpg',
         },
         {
-            id: 2,
+            id: 4,
             name: 'AK-900 Wired Keyboard',
             price: 960,
             originalPrice: 1160,
@@ -56,7 +56,7 @@ export default function Home() {
             image: '/pics/4.jpg',
         },
         {
-            id: 1,
+            id: 5,
             name: 'HAVIT HV-G92 Gamepad',
             price: 120,
             originalPrice: 160,
@@ -66,7 +66,7 @@ export default function Home() {
             image: '/pics/4.jpg',
         },
         {
-            id: 2,
+            id: 6,
             name: 'AK-900 Wired Keyboard',
             price: 960,
             originalPrice: 1160,
@@ -76,7 +76,7 @@ export default function Home() {
             image: '/pics/gamepad.jpg',
         },
         {
-            id: 1,
+            id: 7,
             name: 'HAVIT HV-G92 Gamepad',
             price: 120,
             originalPrice: 160,
@@ -86,7 +86,7 @@ export default function Home() {
             image: '/images/image1.png',
         },
         {
-            id: 2,
+            id: 8,
             name: 'AK-900 Wired Keyboard',
             price: 960,
             originalPrice: 1160,
