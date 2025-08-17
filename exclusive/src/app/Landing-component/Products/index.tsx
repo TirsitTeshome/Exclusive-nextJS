@@ -15,24 +15,21 @@ interface Product {
   reviews: number;
   image: string;
 }
+
 interface ProductCardProps {
   products: Product[];
 }
 
 const ProductCard = ({ products }: ProductCardProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-
   const cardsPerView = 3;
   const maxIndex = Math.max(0, products.length - cardsPerView);
-
   const handlePrev = () => {
     setCurrentIndex((prev) => Math.max(prev - 1, 0));
   };
-
   const handleNext = () => {
     setCurrentIndex((prev) => Math.min(prev + 1, maxIndex));
   };
-
   const translateX = `calc(-${currentIndex * (100 / cardsPerView)}%)`;
 
   return (
@@ -52,9 +49,9 @@ const ProductCard = ({ products }: ProductCardProps) => {
               className="flex transition-transform duration-300 ease-in-out"
               style={{ transform: `translateX(${translateX})` }}
             >
-              {products.map((product) => (
+              {products.map((product, index) => (
                 <div
-                  key={product.id}
+                  key={`${product.id}-${index}`}
                   className="relative bg-gray-100 p-4 rounded-sm shadow-md w-64 flex-shrink-0 group"
                 >
                   <div className="absolute z-10 top-2 left-2 bg-red-500 text-white px-3 py-1 font-poppins rounded-sm text-sm">

@@ -12,6 +12,8 @@ interface TimerProps {
 }
 
 const Timer: React.FC<TimerProps> = ({ date }) => {
+  const [isClient, setIsClient] = useState(false);
+
   const calculateRemainingTime = useCallback((): RemainingTime => {
     const difference = +new Date(date) - +new Date();
     let remainingTime: RemainingTime = {};
@@ -26,14 +28,25 @@ const Timer: React.FC<TimerProps> = ({ date }) => {
     return remainingTime;
   }, [date]);
 
-  const [remainingTime, setRemainingTime] = useState<RemainingTime>(calculateRemainingTime());
+  const [remainingTime, setRemainingTime] = useState<RemainingTime>({});
 
   useEffect(() => {
+    setIsClient(true);  // Detect client-side
+
+    // Initialize timer
+    setRemainingTime(calculateRemainingTime());
+
     const timer = setInterval(() => {
       setRemainingTime(calculateRemainingTime());
     }, 1000);
+
     return () => clearInterval(timer);
   }, [calculateRemainingTime]);
+
+  // Render nothing or a placeholder on the server
+  if (!isClient) {
+    return null;  // or some skeleton/placeholder if you want
+  }
 
   return (
     <div className="mt-5 w-3/4 m-auto">

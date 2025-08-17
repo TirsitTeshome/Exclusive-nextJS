@@ -91,7 +91,7 @@ const Signup = () => {
           </form>
           <button className="w-full p-3 border border-gray-300 flex items-center justify-center mt-4 mb-15">
             <Image
-              src="/images/icon-google.png"
+              src="/pics/Icon-Google.png"
               alt="Google"
               width={20}
               height={20}
